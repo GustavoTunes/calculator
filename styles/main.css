@@ -9,15 +9,32 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto;
     width: 300px;
+    border-left: 1px solid black;
+    grid-template-rows: 1fr 48px 48px 48px 48px 48px;
 }
 
 .grid-button {
     text-align: center;
+    background-color: white;
+    border-radius: 0px;
+    border: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 20px;
 }
 
 .grid-result {
     grid-column: span 4;
-    background-color: green;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 15px;
+    font-size: 35px;
 }
 
 .grid-double-button {

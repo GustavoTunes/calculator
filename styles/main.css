@@ -40,3 +40,7 @@ body {
 .grid-double-button {
     grid-column: span 2;
 }
+
+button:active {
+    background-color: rgb(192, 192, 192);
+  }

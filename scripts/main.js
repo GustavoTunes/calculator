@@ -1,7 +1,8 @@
 const calculator = {
     operations: [],
+    result: 0,
 
-    add_operation(operation) {
+    add_operation(operation) {  
       this.operations.push(operation);
     },
 
@@ -13,9 +14,12 @@ const calculator = {
         this.operations = [];
     },
 
+    calculate_operations() {
+        return eval(this.operations.join(" "));
+    },
+
     show_result() {
-        result = eval(this.operations.join(" "));
-        document.getElementById("result").innerHTML = result;
+        document.getElementById("result").innerHTML = this.calculate_operations();
     },
 };
 

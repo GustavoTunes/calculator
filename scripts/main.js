@@ -1,22 +1,20 @@
 const calculator = {
-    operation: [],
+    operations: [],
 
     add_operation(operation) {
-      this.operation.push(operation)
+      this.operations.push(operation);
     },
 
-    remove_operation(operation) {
-        this.operation.pop(operation)
+    remove_operation() {
+        this.operations.pop();
       },
 
-    clear_operation(operation){
-        while(this.operation.length > 0){
-            this.operation.pop();
-        }
+    clear_operations() {
+        this.operations = [];
     },
 
-    show_result(){
-        result = eval(this.operation.join(" "));
+    show_result() {
+        result = eval(this.operations.join(" "));
         document.getElementById("result").innerHTML = result;
     },
 };

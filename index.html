@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="/scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="grid-result" id="result">0.0</div>
-        <button class="grid-button" onclick="calculator.clear_operation('0.0')">AC</button>
+        <button class="grid-button" onclick="calculator.clear_operations()">AC</button>
         <button class="grid-button" onclick="calculator.add_operation('%')">%</button>
         <button class="grid-button" onclick="calculator.add_operation('/')">/</button>
-        <button class="grid-button" onclick="calculator.remove_operation('C')">C</button>
+        <button class="grid-button" onclick="calculator.remove_operation()">C</button>
         <button class="grid-button" onclick="calculator.add_operation('7')">7</button>
         <button class="grid-button" onclick="calculator.add_operation('8')">8</button>
         <button class="grid-button" onclick="calculator.add_operation('9')">9</button>

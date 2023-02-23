@@ -18,3 +18,5 @@ const calculator = {
         document.getElementById("result").innerHTML = result;
     },
 };
+
+module.exports = calculator;

@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/calculator.js"></script>
+    <script src="scripts/display.js"></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="grid-result" id="result">0.0</div>
         <button class="grid-button" onclick="calculator.clear_operations()">AC</button>
-        <button class="grid-button" onclick="calculator.add_operation('%')">%</button>
-        <button class="grid-button" onclick="calculator.add_operation('/')">/</button>
+        <button class="grid-button" onclick="display.add_operation(calculator, '%')">%</button>
+        <button class="grid-button" onclick="display.add_operation(calculator, '/')">/</button>
         <button class="grid-button" onclick="calculator.remove_operation()">C</button>
-        <button class="grid-button" onclick="calculator.add_operation('7')">7</button>
-        <button class="grid-button" onclick="calculator.add_operation('8')">8</button>
-        <button class="grid-button" onclick="calculator.add_operation('9')">9</button>
-        <button class="grid-button" onclick="calculator.add_operation('*')">x</button>
-        <button class="grid-button" onclick="calculator.add_operation('4')">4</button>
-        <button class="grid-button" onclick="calculator.add_operation('5')">5</button>
-        <button class="grid-button" onclick="calculator.add_operation('6')">6</button>
-        <button class="grid-button" onclick="calculator.add_operation('-')">-</button>
-        <button class="grid-button" onclick="calculator.add_operation('1')">1</button>
-        <button class="grid-button" onclick="calculator.add_operation('2')">2</button>
-        <button class="grid-button" onclick="calculator.add_operation('3')">3</button>
-        <button class="grid-button" onclick="calculator.add_operation('+')">+</button>
-        <button class="grid-button grid-double-button" onclick="calculator.add_operation('0')">0</button>
+        <button class="grid-button" onclick="display.add_value('7')">7</button>
+        <button class="grid-button" onclick="display.add_value('8')">8</button>
+        <button class="grid-button" onclick="display.add_value('9')">9</button>
+        <button class="grid-button" onclick="display.add_operation(calculator, '*')">x</button>
+        <button class="grid-button" onclick="display.add_value('4')">4</button>
+        <button class="grid-button" onclick="display.add_value('5')">5</button>
+        <button class="grid-button" onclick="display.add_value('6')">6</button>
+        <button class="grid-button" onclick="display.add_operation(calculator, '-')">-</button>
+        <button class="grid-button" onclick="display.add_value('1')">1</button>
+        <button class="grid-button" onclick="display.add_value('2')">2</button>
+        <button class="grid-button" onclick="display.add_value('3')">3</button>
+        <button class="grid-button" onclick="display.add_operation(calculator, '+')">+</button>
+        <button class="grid-button grid-double-button" onclick="display.add_value('0')">0</button>
         <button class="grid-button">,</button>
-        <button class="grid-button" onclick="calculator.show_result()">=</button>
+        <button class="grid-button" onclick="display.show_result(calculator)">=</button>
     </div>
 </body>
 </html>

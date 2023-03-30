@@ -1,7 +1,7 @@
-//const { add_operation, show_result, calculate_operations } = require("./calculator");
-
-const display = {
-    display_value: '0.0',
+class Display {
+    constructor() {
+        this.display_value = '0.0';
+    }
 
     add_value(value){
         if (this.display_value == '0.0') {
@@ -9,13 +9,13 @@ const display = {
         } else {
             this.display_value = this.display_value.concat(value);
         }
-    },
+    }
 
     add_operation(calculator, operation){
         calculator.add_operation(this.display_value);
         calculator.add_operation(operation);
         this.display_value = '0.0'
-    },
+    }
 
     show_result(calculator){
         calculator.add_operation(this.display_value);
@@ -23,6 +23,11 @@ const display = {
         calculator.show_result();
     }
 
+    calculate_operations(calculator){
+        calculator.add_operation(this.display_value);
+        calculator.calculate_operations();
+    }
+
 }
 
-module.exports = display;
+module.exports = Display;

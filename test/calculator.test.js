@@ -1,8 +1,8 @@
-const calculator = require('../scripts/calculator.js');
+const Calculator = require('../scripts/calculator.js');
 
 test('It adds 1 into operations array', () => {
     // Setup
-    calculator.clear_operations();
+    const calculator = new Calculator();
     // Exercise
     calculator.add_operation('1');
     // Verify
@@ -11,7 +11,7 @@ test('It adds 1 into operations array', () => {
 
 test('It sum 2 with 2 and return 4', () => {
     // Setup 
-    calculator.clear_operations();
+    const calculator = new Calculator();
     // Exercise
     calculator.add_operation('2');
     calculator.add_operation('+');
@@ -22,7 +22,7 @@ test('It sum 2 with 2 and return 4', () => {
 
 test('It sum 5 with 2 and after multiple by 2', () => {
     // Setup 
-    calculator.clear_operations();
+    const calculator = new Calculator();
     // Exercise
     calculator.add_operation('5');
     calculator.add_operation('+');
@@ -35,7 +35,7 @@ test('It sum 5 with 2 and after multiple by 2', () => {
 
 test("It's able to calculate numbers with more than two decimal places", () => {
     // Setup 
-    calculator.clear_operations();
+    const calculator = new Calculator();
     // Exercise
     calculator.add_operation('20');
     calculator.add_operation('+');
@@ -46,7 +46,7 @@ test("It's able to calculate numbers with more than two decimal places", () => {
 
 test("It's able to calculte decimal numbers", () => {
     // Setup 
-    calculator.clear_operations();
+    const calculator = new Calculator();
     // Exercise
     calculator.add_operation('1.5');
     calculator.add_operation('+');

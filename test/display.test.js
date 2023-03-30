@@ -1,9 +1,9 @@
-const calculator = require('../scripts/calculator.js');
-const display = require('../scripts/display.js');
+const Calculator = require('../scripts/calculator.js');
+const Display = require('../scripts/display.js');
 
 test('It adds 10 to display value', () => {
     // Setup
-    display.display_value = '0.0';
+    const display = new Display();
     // Exercise
     display.add_value('1');
     display.add_value('0');
@@ -13,7 +13,7 @@ test('It adds 10 to display value', () => {
 
 test('It adds 5.50 to display value', () => {
     // Setup
-    display.display_value = '0.0';
+    const display = new Display();
     // Exercise
     display.add_value('5');
     display.add_value('.');
@@ -25,7 +25,8 @@ test('It adds 5.50 to display value', () => {
 
 test('It adds 10 and + to calculator operations', () => {
     // Setup
-    display.display_value = '0.0';
+    const display = new Display();
+    const calculator = new Calculator();
     // Exercise
     display.add_value('1');
     display.add_value('0');
@@ -37,15 +38,15 @@ test('It adds 10 and + to calculator operations', () => {
 
 test('It calculate 10 + 10 and return the value to calculator', () => {
     // Setup
-    display.display_value = '0.0';
-    calculator.clear_operations();
+    const display = new Display();
+    const calculator = new Calculator();
     // Exercise
     display.add_value('1');
     display.add_value('0');
     display.add_operation(calculator,'+');
     display.add_value('1');
     display.add_value('0');
-    display.show_result(calculator);
+    display.calculate_operations(calculator);
     // Verify
     expect(calculator.calculate_operations()).toEqual(20);
 });

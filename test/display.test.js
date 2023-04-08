@@ -1,5 +1,5 @@
-const Calculator = require('../scripts/calculator.js');
-const Display = require('../scripts/display.js');
+const Calculator = require('../src/calculator.js');
+const Display = require('../src/display.js');
 
 test('It adds 10 to display value', () => {
     // Setup

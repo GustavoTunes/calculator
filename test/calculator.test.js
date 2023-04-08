@@ -1,4 +1,4 @@
-const Calculator = require('../scripts/calculator.js');
+const Calculator = require('../src/calculator.js');
 
 test('It adds 1 into operations array', () => {
     // Setup

@@ -1,8 +1,6 @@
 import Calculator from "./calculator";
 import Display from "./display";
+import "/styles/main.css"
 
-const calculator = new Calculator();
-const display = new Display();
-
-console.log(calculator)
-console.log(display)
+window.calculator = new Calculator();
+window.display = new Display();

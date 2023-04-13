@@ -1,4 +1,4 @@
-const Calculator = require('../src/calculator.js');
+import Calculator from '../src/calculator.js';
 
 test('It adds 1 into operations array', () => {
     // Setup
